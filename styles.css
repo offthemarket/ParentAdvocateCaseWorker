@@ -1,0 +1,301 @@
+/* Reset-ish */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f5f6fb;
+    color: #0f172a;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========== SIDEBAR ========== */
+
+.pa-sidebar {
+    width: 290px;
+    background: linear-gradient(180deg, #5b4bdf, #8f6fe9);
+    color: #fdfbff;
+    padding: 18px 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.pa-sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.pa-logo-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.6);
+    font-size: 16px;
+}
+
+.pa-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.pa-app-name {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.pa-app-tagline {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+/* Profile card */
+
+.pa-profile-card {
+    background: rgba(15, 23, 42, 0.28);
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid rgba(15, 23, 42, 0.4);
+}
+
+.pa-profile-name {
+    font-weight: 600;
+}
+
+.pa-profile-case {
+    opacity: 0.9;
+}
+
+/* Nav sections */
+
+.pa-nav {
+    flex: 1;
+    margin-top: 4px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.pa-nav-section {
+    margin-bottom: 4px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pa-nav-toggle {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fdfbff;
+    font-size: 13px;
+    padding: 7px 9px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.15s ease;
+}
+
+.pa-nav-toggle:hover {
+    background: rgba(15, 23, 42, 0.25);
+}
+
+.pa-chevron {
+    font-size: 10px;
+    opacity: 0.85;
+    transition: transform 0.15s ease;
+}
+
+.pa-nav-section.open .pa-chevron {
+    transform: rotate(180deg);
+}
+
+.pa-nav-list {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background: rgba(15, 23, 42, 0.30);
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+.pa-nav-section.open .pa-nav-list {
+    max-height: 260px;
+    /* large enough for any section */
+}
+
+.pa-nav-list li {
+    font-size: 12px;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.pa-nav-list li:first-child {
+    border-top: none;
+}
+
+.pa-nav-list li:hover {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+/* Hint bar at bottom */
+
+.pa-hint {
+    margin-top: 6px;
+    font-size: 11px;
+    min-height: 32px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(15, 23, 42, 0.55);
+    line-height: 1.25;
+}
+
+/* ========== MAIN AREA ========== */
+
+.pa-main {
+    flex: 1;
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Hero banner */
+
+.pa-hero {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border-radius: 18px;
+    padding: 18px 24px;
+    color: #f9fafb;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.pa-hero-text h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.pa-hero-text p {
+    font-size: 14px;
+    max-width: 640px;
+    opacity: 0.95;
+}
+
+/* Auth cards */
+
+.pa-auth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.auth-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.auth-card h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-card label {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.auth-card input {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 13px;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.3);
+}
+
+.auth-card button {
+    margin-top: 4px;
+    padding: 9px 12px;
+    border-radius: 999px;
+    border: none;
+    background: #4f46e5;
+    color: #f9fafb;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #4338ca;
+}
+
+/* Note */
+
+.pa-note {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .pa-sidebar {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .pa-main {
+        padding: 16px 18px 24px;
+    }
+
+    .pa-auth-grid {
+        grid-template-columns: 1fr;
+    }
+}

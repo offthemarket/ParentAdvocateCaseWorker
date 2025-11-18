@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ParentAdvocateAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="pa-sidebar">
+            <!-- Logo / title -->
+            <div class="pa-sidebar-header">
+                <div class="pa-logo-icon">🛡️</div>
+                <div class="pa-logo-text">
+                    <div class="pa-app-name">ParentAdvocateAI</div>
+                    <div class="pa-app-tagline">AI-powered case management for family reunification</div>
+                </div>
+            </div>
+
+            <!-- Quick profile / case summary -->
+            <div class="pa-profile-card">
+                <div class="pa-profile-name">Your Name</div>
+                <div class="pa-profile-case">Case: YTH-23-000000</div>
+            </div>
+
+            <!-- NAV SECTIONS -->
+            <nav class="pa-nav">
+
+                <!-- Dashboard -->
+                <section class="pa-nav-section open">
+                    <button class="pa-nav-toggle">
+                        <span>Dashboard</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Snapshot of everything due and coming up.">Overview</li>
+                        <li data-hint="Quick stats on contact, programs, and court dates.">Quick Stats</li>
+                        <li data-hint="Red flags: missed tests, overdue tasks, urgent items.">Alerts</li>
+                        <li data-hint="All court, contact and program deadlines in one list.">Upcoming Deadlines</li>
+                    </ul>
+                </section>
+
+                <!-- Documents -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Documents</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Upload letters, orders, reports and evidence.">Upload Documents</li>
+                        <li data-hint="All current and past court orders.">Court Orders</li>
+                        <li data-hint="Your current case plan broken into steps.">Case Plan</li>
+                        <li data-hint="Notes and reports written by DCP.">DCP Notes</li>
+                        <li data-hint="Letters and emails from your lawyer.">Lawyer Letters</li>
+                        <li data-hint="Contact logs between you, child, and workers.">Contact Logs</li>
+                    </ul>
+                </section>
+
+                <!-- Court -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Court</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Upcoming court dates and locations.">Hearing Dates</li>
+                        <li data-hint="Affidavits and statements you or others filed.">Affidavits</li>
+                        <li data-hint="Plain-English summaries of each hearing.">Court Summaries</li>
+                        <li data-hint="Evidence DCP says they’re relying on.">Required Evidence</li>
+                        <li data-hint="Orders and decisions made by the court.">Outcomes & Decisions</li>
+                    </ul>
+                </section>
+
+                <!-- Compliance -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Compliance</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Track all drug and alcohol tests.">Drug Tests (DASSA, Sonder, MHS)</li>
+                        <li data-hint="Programs you’re doing: counselling, courses, rehab.">Programs</li>
+                        <li data-hint="All appointments linked to your case plan.">Appointments</li>
+                        <li data-hint="Safety plan tasks broken into tick-off steps.">Safety Plan Tasks</li>
+                        <li data-hint="Space to record your wins and progress.">Achievements & Progress</li>
+                    </ul>
+                </section>
+
+                <!-- Appointments -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Appointments</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Everything booked: DCP, services, court, etc.">Upcoming</li>
+                        <li data-hint="Appointments you missed, with reasons.">Missed</li>
+                        <li data-hint="Appointments you attended (proof of compliance).">Completed</li>
+                        <li data-hint="Requests and emails to reschedule appointments.">Reschedule Requests</li>
+                    </ul>
+                </section>
+
+                <!-- Child Updates -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Child Updates</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="School reports, teacher notes and attendance.">School Updates</li>
+                        <li data-hint="Therapy or counselling notes.">Therapy Updates</li>
+                        <li data-hint="Behaviour notes from carers, school or visits.">Behaviour Notes</li>
+                        <li data-hint="Health, doctors, medications, and incidents.">Health Updates</li>
+                    </ul>
+                </section>
+
+                <!-- Reports -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Reports</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Weekly summary for court or your lawyer.">Weekly Parent Report</li>
+                        <li data-hint="Reflection journals like AFSS used to do.">Reflection Journals</li>
+                        <li data-hint="Notes on how workers behaved and what they said.">Caseworker Interaction Notes
+                        </li>
+                        <li data-hint="Auto-generated summary of your progress.">Progress Summary Generator</li>
+                    </ul>
+                </section>
+
+                <!-- Chat -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Chat</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Ask the AI anything about your case.">Parent–AI Chat</li>
+                        <li data-hint="Space to keep track of what DCP says in calls and meetings.">Parent–DCP Chat Log
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Support Services -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Support Services</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="SA phone numbers for drug & alcohol support.">Drug & Alcohol</li>
+                        <li data-hint="Helplines and services for mental health.">Mental Health</li>
+                        <li data-hint="Legal helplines and community legal centres.">Legal Support</li>
+                        <li data-hint="Useful emergency and crisis services.">Emergency Contacts</li>
+                    </ul>
+                </section>
+
+                <!-- AI Case Analytics -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>AI Case Analytics</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="AI summary of DCP’s concerns.">Identify DCP Concerns</li>
+                        <li data-hint="What you’ve already done to address concerns.">Completed Actions</li>
+                        <li data-hint="What’s left to do, turned into a checklist.">Next Steps Plan</li>
+                        <li data-hint="Risks flagged by AI (and how to fix them).">Risk/Strength Map</li>
+                    </ul>
+                </section>
+
+                <!-- Settings -->
+                <section class="pa-nav-section">
+                    <button class="pa-nav-toggle">
+                        <span>Settings</span>
+                        <span class="pa-chevron">▾</span>
+                    </button>
+                    <ul class="pa-nav-list">
+                        <li data-hint="Update your name, email and password.">Profile</li>
+                        <li data-hint="Switch between different children / cases.">Case Details</li>
+                        <li data-hint="Choose how often you want reminders.">Reminders</li>
+                        <li data-hint="Control what data is stored and exported.">Privacy Controls</li>
+                    </ul>
+                </section>
+            </nav>
+
+            <!-- Hint box at the bottom -->
+            <div class="pa-hint" id="pa-hint">
+                Hover over a menu item to see what it does.
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="pa-main">
+            <!-- Hero banner -->
+            <header class="pa-hero">
+                <div class="pa-hero-text">
+                    <h1>ParentAdvocateAI</h1>
+                    <p>AI-powered case management to help you understand your DCP case, stay organised, and work toward
+                        reunification.</p>
+                </div>
+            </header>
+
+            <!-- Login / Sign-up area -->
+            <section class="pa-auth-grid">
+                <!-- Login card -->
+                <div class="auth-card">
+                    <h2>🔒 Login</h2>
+                    <form>
+                        <label>
+                            Email
+                            <input type="email" placeholder="you@example.com" />
+                        </label>
+                        <label>
+                            Password
+                            <input type="password" placeholder="Enter your password" />
+                        </label>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+
+                <!-- Sign up card -->
+                <div class="auth-card">
+                    <h2>📝 Sign Up</h2>
+                    <form>
+                        <label>
+                            Full Name
+                            <input type="text" placeholder="Your full name" />
+                        </label>
+                        <label>
+                            Your Email
+                            <input type="email" placeholder="you@example.com" />
+                        </label>
+                        <label>
+                            Your Password
+                            <input type="password" placeholder="Create a password" />
+                        </label>
+                        <button type="submit">Create Account</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Later this could become the AI chat area -->
+            <section class="pa-note">
+                This is just the first version of your interface. We’ll hook it up to real AI responses and data later.
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
